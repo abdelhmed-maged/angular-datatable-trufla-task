@@ -9,11 +9,11 @@ import { DataListService } from './data-list.service'; // importing the service
   styleUrls: ['./data-table.component.scss']
 })
 export class DataTableComponent implements OnInit {
+  datasource: MatTableDataSource<Data>; // data source that accepts a client-side data array
   displayedColumns: string[] = ['id', 'title', 'image']; //  define the row templates
   fetchedData: Data[];
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator; // decorator that configures a view query for the pagination
   @ViewChild(MatSort, {static: true}) sort: MatSort; // decorator that configures a view query for the sort
-  datasource: MatTableDataSource<Data>; // data source that accepts a client-side data array
   pageSize = 10; // default page size
   loading ;
   constructor(private ds: DataListService) { // instantiate the object inside the constructor and
