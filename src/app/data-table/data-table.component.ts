@@ -38,14 +38,14 @@ export class DataTableComponent implements OnInit {
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.datasource.filter = filterValue; // Assign the filtered value to the datasource
   }
-  onResize(event) {
-    if (event.target.innerWidth > 600 && event.target.innerWidth < 800) {
-      this.pageSize = 10; // Adjust page size to 10 for tablet display
-    }
-    else if (event.target.innerWidth > 800 && event.target.innerWidth < 1000) {
-      this.pageSize = 15; // Adjust page size to 15 for desktop display
-    } else {
-      this.pageSize = 5; // Adjust page size to 5 for mobile display
-    }
-  }
+  // onResize(event) {
+  //   if (event.target.innerWidth > 600 && event.target.innerWidth < 800) {
+  //     this.pageSize = 10; // Adjust page size to 10 for tablet display
+  //   }
+  //   else if (event.target.innerWidth > 800 && event.target.innerWidth < 1000) {
+  //     this.pageSize = 15; // Adjust page size to 15 for desktop display
+  //   } else {
+  //     this.pageSize = 5; // Adjust page size to 5 for mobile display
+  //   }
+  // }
 }
