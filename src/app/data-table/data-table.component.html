@@ -8,9 +8,7 @@
   <div class="card-body p-2">
     <div class="d-flex flex-column justify-content-center m-3">
     <div class="table-header">
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="filter here...">
-  </mat-form-field>
+    <input class="form-control" (keyup)="applyFilter($event.target.value)" placeholder="filter here...">
 </div>
     <div class="mat-elevation-z8">
       <div>
